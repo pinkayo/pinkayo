@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-04T13:35:40.285Z</updated>
+  <updated>2018-06-04T13:37:26.129Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,17 +21,15 @@
     <link href="http://yoursite.com/2018/06/04/hexo/"/>
     <id>http://yoursite.com/2018/06/04/hexo/</id>
     <published>2018-06-04T13:33:07.000Z</published>
-    <updated>2018-06-04T13:35:40.285Z</updated>
+    <updated>2018-06-04T13:37:26.129Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;什麼是-Hexo？&quot;&gt;&lt;a href=&quot;#什麼是-Hexo？&quot; class=&quot;headerlink&quot; title=&quot;什麼是 Hexo？&quot;&gt;&lt;/a&gt;什麼是
-        
-      
+      &lt;h2 id=&quot;什麼是-Hexo？&quot;&gt;&lt;a href=&quot;#什麼是-Hexo？&quot; class=&quot;headerlink&quot; title=&quot;什麼是 Hexo？&quot;&gt;&lt;/a&gt;什麼是 Hexo？&lt;/h2&gt;&lt;p&gt;Hexo是一個快速、簡單且強大的部落格框架。我們可以透過Hexo將Markdown語法轉換成HTML靜態網頁。&lt;/p&gt;
+&lt;h2 id=&quot;Hexo特色：&quot;&gt;&lt;a href=&quot;#Hexo特色：&quot; class=&quot;headerlink&quot; title=&quot;Hexo特色：&quot;&gt;&lt;/a&gt;Hexo特色：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;用Markdown語法寫blog&lt;/li&gt;
+&lt;li&gt;多種網站主題與插件可供選擇&lt;/li&gt;
+&lt;li&gt;輕易部署到Github Pages
     
     </summary>
     
