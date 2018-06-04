@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title>Hexo+Github</title>
+      <link href="/2018/06/04/hexo/"/>
+      <url>/2018/06/04/hexo/</url>
+      <content type="html"><![CDATA[<h2 id="什麼是-Hexo？"><a href="#什麼是-Hexo？" class="headerlink" title="什麼是 Hexo？"></a>什麼是 Hexo？</h2><p>Hexo是一個快速、簡單且強大的部落格框架。我們可以透過Hexo將Markdown語法轉換成HTML靜態網頁。</p><h2 id="Hexo特色："><a href="#Hexo特色：" class="headerlink" title="Hexo特色："></a>Hexo特色：</h2><ul><li>用Markdown語法寫blog</li><li>多種網站主題與插件可供選擇</li><li>輕易部署到Github Pages</li></ul><h2 id="安裝Hexo"><a href="#安裝Hexo" class="headerlink" title="安裝Hexo"></a>安裝Hexo</h2><p>Hexo由Node.js寫成，所以在使用Hexo前需先安裝<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a>套件。<br><img src="/img/nodejs.png" alt="nodejs"><br>裝完後再接下來的過程中會使用到<a href="https://code.visualstudio.com/Download" target="_blank" rel="noopener">Visual Studio Code</a>與<a href="https://tortoisegit.org/" target="_blank" rel="noopener">TortoiseGIT</a>，需先安裝這2套軟體。<br>備註：安裝Visual Studio Code過程需將紅框處打勾<br><img src="/img/vsc.png" alt="vsc"></p><pre><code>npm install hexo-cli -g    #安裝Hexo框架hexo init blog             #初始化blog資料夾cd blog                    #切換至blog資料夾npm install                #安裝npm套件hexo server                #啟動local端server</code></pre><p>在D槽先建立一個資料夾名稱，進入此資料夾右鍵使用Open with Code，開啟整合式終端機(快捷鍵<kbd>Ctrl + <kbd>`</kbd></kbd>)依序輸入上面1~5的步驟<br>接著打開瀏覽器輸入localhost:4000，進入部落格的世界~</p><p><img src="/img/hexo.png" alt="hexo"></p><p>新建一篇部落格文章</p><pre><code>hexo new &quot;文章名稱&quot;</code></pre><p><img src="/img/blog.png" alt="blog"></p><p>將部落格推送到Github前，先修改部落格框架的設定檔(_config.yml)後進行存檔<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: git@github.com:你的ID/你的ID.github.io.git</span><br><span class="line">branch:master</span><br></pre></td></tr></table></figure></p><p><img src="/img/git.png" alt="git"></p><p>然後安裝Git佈署套件(整合式終端機輸入指令)</p><pre><code>npm install hexo-deployer-git — save</code></pre><p>在輸入</p><pre><code>hexo g #編譯成靜態檔案hexo d #佈署到倉庫</code></pre><p>開啟瀏覽器輸入 你的ID.github.io 就能看到部落格成功丟上去了</p>]]></content>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>產生ssh key for github</title>
+      <link href="/2018/04/08/ssh%20key/"/>
+      <url>/2018/04/08/ssh%20key/</url>
+      <content type="html"><![CDATA[<p>在建立ssh key時請先安裝<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">git for windows</a>套件。<br>設定git使用github名稱與註冊電子信箱</p><p><code>git config --global user.name &quot;github名稱&quot;</code><br><code>git config --global user.email &quot;github註冊的電子信箱&quot;</code></p><p>使用github的倉庫時可以透過兩種方式來進行提取/存放分別是Https或ssh，若選用Https來進行操作的話，每次推送到倉庫時都必須輸入github帳號密碼，如果使用ssh方式，只要到github上設定public key，後續進行任何操作就不需要再次輸入github帳號密碼。<br><a id="more"></a><br>開啟 命令提示字元輸入以下來檢查是否有相關檔案</p><pre><code>ls -al ~/.ssh</code></pre><p>如果沒有ssh key，透過以下步驟製作ssh key<br>1、開啟 命令提示字元</p><p>2、輸入下列指令， 並在 “”中輸入自己的github mail</p><pre><code>ssh-keygen -t rsa -b 4096 -C &quot;GitHub email address&quot;</code></pre><p>3、出現設定ssh key密碼(這邊直接enter略過)</p><p>4、完成後會出現如下畫面</p><p><img src="/img/ssh0.png" alt="ssh0"></p><p>5、輸入以下指令，複製ssh key貼到記事本</p><pre><code>clip &lt; ~/.ssh/id_rsa.pub</code></pre><p>6、登入到github頁面中，點選右上頭像後點選 Settings後，在點選左手邊的SSH and GPG keys</p><p><img src="/img/ssh2.png" alt="ssh2"></p><p>7、選擇 New SSH key</p><p><img src="/img/ssh3.png" alt="ssh3"></p><p>8、貼上剛剛複製到記事本上的ssh key並給這個key一個名稱</p><p><img src="/img/ssh4.png" alt="ssh4"></p><p>9、增加ssh key後測試是否有連結成功，開啟<strong>命令提示字元</strong></p><p>10、輸入以下指令</p><pre><code>ssh -T git@github.com</code></pre><p>11、輸入yes後如出現以下訊息就表示連結成功</p><p><img src="/img/ssh1.png" alt="ssh1"></p>]]></content>
+      
+      
+    </entry>
+    
+    <entry>
+      <title>申請github</title>
+      <link href="/2018/04/08/create%20github/"/>
+      <url>/2018/04/08/create%20github/</url>
+      <content type="html"><![CDATA[<p>首先先到github的官網申請一個空間，利用此空間來建置屬於自己獨一無二的部落格吧！</p><h2 id="1、點選Sign-up申請帳號"><a href="#1、點選Sign-up申請帳號" class="headerlink" title="1、點選Sign up申請帳號"></a>1、點選Sign up申請帳號</h2><p> <img src="/img/git1.png" alt="git1"><br><a id="more"></a></p><h2 id="2、填寫帳號與信箱最後設定密碼"><a href="#2、填寫帳號與信箱最後設定密碼" class="headerlink" title="2、填寫帳號與信箱最後設定密碼"></a>2、填寫帳號與信箱最後設定密碼</h2><p> <img src="/img/git2.png" alt="git2"></p><h2 id="3、點選公開免費的倉庫"><a href="#3、點選公開免費的倉庫" class="headerlink" title="3、點選公開免費的倉庫"></a>3、點選公開免費的倉庫</h2><p><img src="/img/git3.png" alt="git3"></p><h2 id="4、這裡就直接Submit"><a href="#4、這裡就直接Submit" class="headerlink" title="4、這裡就直接Submit"></a>4、這裡就直接Submit</h2><p><img src="/img/git4.png" alt="git4"></p><h2 id="5、建立倉庫"><a href="#5、建立倉庫" class="headerlink" title="5、建立倉庫"></a>5、建立倉庫</h2><p><img src="/img/git5.png" alt="git5"></p><h2 id="6、輸入倉庫名稱"><a href="#6、輸入倉庫名稱" class="headerlink" title="6、輸入倉庫名稱"></a>6、輸入倉庫名稱</h2><h3 id="提醒：每個帳號只能有一個倉庫可以用來存放個人首頁，而且倉庫的名稱必需是帳號-github-io。"><a href="#提醒：每個帳號只能有一個倉庫可以用來存放個人首頁，而且倉庫的名稱必需是帳號-github-io。" class="headerlink" title="提醒：每個帳號只能有一個倉庫可以用來存放個人首頁，而且倉庫的名稱必需是帳號.github.io。"></a><font color="red">提醒：每個帳號只能有一個倉庫可以用來存放個人首頁，而且倉庫的名稱必需是帳號.github.io。<font></font></font></h3><p><img src="/img/git6.png" alt="git6"></p><h1 id="7、github有提供https與ssh-2種提取-存放-倉庫的方式，這邊我們選用ssh"><a href="#7、github有提供https與ssh-2種提取-存放-倉庫的方式，這邊我們選用ssh" class="headerlink" title="7、github有提供https與ssh 2種提取/存放 倉庫的方式，這邊我們選用ssh"></a>7、github有提供https與ssh 2種提取/存放 倉庫的方式，這邊我們選用ssh</h1><p><img src="/img/git7.png" alt="git7"></p>]]></content>
+      
+      
+    </entry>
+    
+  
+  
+    
+  
+</search>

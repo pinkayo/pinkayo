@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hsin筆記</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-06-04T13:35:40.285Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Hsin</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo+Github</title>
+    <link href="http://yoursite.com/2018/06/04/hexo/"/>
+    <id>http://yoursite.com/2018/06/04/hexo/</id>
+    <published>2018-06-04T13:33:07.000Z</published>
+    <updated>2018-06-04T13:35:40.285Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;什麼是-Hexo？&quot;&gt;&lt;a href=&quot;#什麼是-Hexo？&quot; class=&quot;headerlink&quot; title=&quot;什麼是 Hexo？&quot;&gt;&lt;/a&gt;什麼是
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>產生ssh key for github</title>
+    <link href="http://yoursite.com/2018/04/08/ssh%20key/"/>
+    <id>http://yoursite.com/2018/04/08/ssh key/</id>
+    <published>2018-04-08T14:07:07.000Z</published>
+    <updated>2018-05-25T03:02:54.594Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在建立ssh key時請先安裝&lt;a href=&quot;https://git-scm.com/download/win&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;git for windows&lt;/a&gt;套件。&lt;br&gt;設定git使用github名稱與註冊電子信箱&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git config --global user.name &amp;quot;github名稱&amp;quot;&lt;/code&gt;&lt;br&gt;&lt;code&gt;git config --global user.email &amp;quot;github註冊的電子信箱&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用github的倉庫時可以透過兩種方式來進行提取/存放分別是Https或ssh，若選用Https來進行操作的話，每次推送到倉庫時都必須輸入github帳號密碼，如果使用ssh方式，只要到github上設定public key，後續進行任何操作就不需要再次輸入github帳號密碼。&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>申請github</title>
+    <link href="http://yoursite.com/2018/04/08/create%20github/"/>
+    <id>http://yoursite.com/2018/04/08/create github/</id>
+    <published>2018-04-08T14:06:06.000Z</published>
+    <updated>2018-05-25T03:02:54.594Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;首先先到github的官網申請一個空間，利用此空間來建置屬於自己獨一無二的部落格吧！&lt;/p&gt;
+&lt;h2 id=&quot;1、點選Sign-up申請帳號&quot;&gt;&lt;a href=&quot;#1、點選Sign-up申請帳號&quot; class=&quot;headerlink&quot; title=&quot;1、點選Sign up申請帳號&quot;&gt;&lt;/a&gt;1、點選Sign up申請帳號&lt;/h2&gt;&lt;p&gt; &lt;img src=&quot;/img/git1.png&quot; alt=&quot;git1&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
