@@ -34,8 +34,8 @@
     
     <entry>
       <title>關於我</title>
-      <link href="/about/about.html"/>
-      <url>/about/about.html</url>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       <content type="html"><![CDATA[<p><img src="/img/p.png" alt="p"></p>]]></content>
     </entry>
     
