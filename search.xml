@@ -33,7 +33,7 @@
   
     
     <entry>
-      <title>about</title>
+      <title>關於我</title>
       <link href="/about/about.html"/>
       <url>/about/about.html</url>
       <content type="html"><![CDATA[<p><img src="/img/p.png" alt="p"></p>]]></content>
