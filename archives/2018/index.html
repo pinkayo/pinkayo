@@ -243,43 +243,22 @@
       </div>
     </main>
     
-<footer id="footer" class="footer">
-  <div class="container">
-    <div class="back-to-top">
-      <a id="back-to-top"><i class="fas fa-angle-double-up"></i></a>
-    </div>
-    <div class="footer-container">
-      <div class="footer-left">
-        <div class="copyright">
-          <span class="author">Hsin</span>
-          <span class="year"><i class="far fa-copyright"></i> 2018</span>
-          
-        </div>
-        
-        
-<div class="busuanzi">
-  <span id="busuanzi_container_site_pv"><i class="fas fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
-  <span id="busuanzi_container_site_uv"><i class="fas fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
-  <span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i> <span id="busuanzi_value_page_pv"></span></span>
-</div>
-
-
-        
-      </div>
-      <div class="footer-right">
-        <div class="custom-info">
-          
-          托管於 <i class="fab fa-github-alt"></i> <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
-          
-        </div>
-        <div class="powered-by">
-          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驅動 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
+<!-- 不蒜子 -->
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- 不蒜子计数初始值纠正 -->
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 100);
+        var busuanziSiteOffset = parseInt(100000);
+        function fixCount() {
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                clearInterval(int);
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + busuanziSiteOffset);
+            }
+        }
+    });
+</script>
 
   </body>
 </html>
