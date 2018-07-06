@@ -5,21 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
     
     
+    <meta name="google-site-verification" content="">
     
     
+    <meta name="keywords" content="Life, ARIA, Hexo">
     
     
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
     
     
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
     
     
     <link rel="alternate" href="/atom.xml" title="Hsin筆記" type="application/atom+xml" />
     
     <link rel="stylesheet" type="text/css" href="/css/index.css">
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="/css/[object Object].css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
     <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script defer type="text/javascript" src="/js/util.js"></script>
@@ -31,6 +52,8 @@
     <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
     <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
     <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
     
     
     <script defer type="text/javascript" src="/js/search.js"></script>
@@ -60,13 +83,19 @@
         <h2 class="subtitle"></h2>
       </div>
       <div class="logo">
-        <img src="/" alt="logo">
+        <img src="/images/ARIA_logo.png" alt="logo">
       </div>
     </div>
     
 <nav id="nav" class="nav">
   <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
   <ul id="menu">
+    
+    <li><a href="/">首頁</a></li>
+    
+    <li><a href="/archives/">歸檔</a></li>
+    
+    <li><a href="/about/">關於</a></li>
     
   </ul>
 </nav>
@@ -89,7 +118,7 @@
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="Hsin">
        <meta itemprop="description" content="">
-       <meta itemprop="image" content="/">
+       <meta itemprop="image" content="/images/avatar.png">
       </span>
       <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
        <meta itemprop="name" content="Hsin筆記">
@@ -180,9 +209,16 @@
   
 <div class="info sidebar-item" id="info">
   
+  <img class="author-avatar" src="/images/avatar.png" alt="Hsin">
+  
   <p class="author-name">Hsin</p>
   <p class="author-description"> </p>
   <div class="site-count">
+    
+    <div class="archives-count">
+      <p>歸檔</p>
+      <p><a href="/archives/">3</a></p>
+    </div>
     
     
     
@@ -205,6 +241,52 @@
     
     
     
+<hr>
+<div class="social-link sidebar-item">
+  <p><i class="far fa-address-card"></i> 社交連結</p>
+  <ul>
+    
+    <li><i class="fab fa-github"></i> <a href="https://github.com/pinkayo" target="_blank">GitHub</a></li>
+    
+  </ul>
+</div>
+
+
+    
+    
+    
+<hr>
+<div class="blogroll sidebar-item">
+  <p><i class="fas fa-link"></i> 友情連結</p>
+  <ul>
+    
+    <li><a href="https://www.developer.idv.tw" target="_blank">xian</a></li>
+    
+    <li><a href="https://www.yahuihu.info" target="_blank">hui</a></li>
+    
+    <li><a href="https://www.chunyi.info" target="_blank">chunyi</a></li>
+    
+    <li><a href="https://rita830205.github.io/" target="_blank">rita</a></li>
+    
+    <li><a href="https://hueidevops.github.io/" target="_blank">huei</a></li>
+    
+    <li><a href="https://supermotobike.github.io/" target="_blank">yujie</a></li>
+    
+    <li><a href="https://asd01248967.github.io/" target="_blank">jaja</a></li>
+    
+    <li><a href="https://kennyweng.github.io/" target="_blank">kenny</a></li>
+    
+    <li><a href="https://yishan88.github.io/" target="_blank">shan</a></li>
+    
+    <li><a href="https://snoopy30485.github.io/" target="_blank">snoopy</a></li>
+    
+    <li><a href="https://jay198608.github.io/" target="_blank">jay</a></li>
+    
+  </ul>
+</div>
+
+
+    
   </div>
 </aside>
 
@@ -214,5 +296,22 @@
       </div>
     </main>
     
+<!-- 不蒜子 -->
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- 不蒜子计数初始值纠正 -->
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 100);
+        var busuanziSiteOffset = parseInt(100000);
+        function fixCount() {
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                clearInterval(int);
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + busuanziSiteOffset);
+            }
+        }
+    });
+</script>
+
   </body>
 </html>
